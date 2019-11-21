@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Update of this site</title>
+    <url>/2019/11/21/update/</url>
+    <content><![CDATA[<p>##Description</p>
+<p>This site is established using github and hexo <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! Update od the site will be shown in this article. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info about hexo. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a>.</p>
+<h2 id="Setup-the-Site"><a href="#Setup-the-Site" class="headerlink" title="Setup the Site"></a>Setup the Site</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>Install node.js , git , hexo</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install nodejs</span><br><span class="line">$ sudo apt-get install git</span><br><span class="line">$ sudo apt-get install npm</span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>Then setup a github repository.</p>
+<h3 id="Connect-Github-with-Localhost"><a href="#Connect-Github-with-Localhost" class="headerlink" title="Connect Github with Localhost"></a>Connect Github with Localhost</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"your github name"</span></span><br><span class="line">$ git config --global user.email <span class="string">"your github email"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-SSH-Key"><a href="#Get-SSH-Key" class="headerlink" title="Get SSH Key"></a>Get SSH Key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"your github email"</span></span><br></pre></td></tr></table></figure>
+<p>Copy the content in ~/.ssh/id_rsa.pub and paste it to github – settings – SSH and GPG keys – add new SSH</p>
+<h3 id="Make-the-Blog"><a href="#Make-the-Blog" class="headerlink" title="Make the Blog"></a>Make the Blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+<p>Change /_config.yml</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repo: git@github.com: <span class="string">"yoursite (can get from clone)"</span></span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="Generate-Static-File"><a href="#Generate-Static-File" class="headerlink" title="Generate Static File"></a>Generate Static File</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>###Run Server</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>Search “localhost:4000”  in google search engine.</p>
+<h3 id="Deploy-to-Remote-Site"><a href="#Deploy-to-Remote-Site" class="headerlink" title="Deploy to Remote Site"></a>Deploy to Remote Site</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>Finish</p>
+]]></content>
+      <categories>
+        <category>guide</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/11/21/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
